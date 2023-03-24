@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="202022161215-薛正康-计20.3-实验3, Hexo">
-    <meta name="description" content="目前此博客仅用于云计算实验">
+    <meta name="keywords" content="实验3 运用云平台搭建个人博客, Hexo">
+    <meta name="description" content="Ŀǰ�˲��ͽ������Ƽ���ʵ��">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>202022161215-薛正康-计20.3-实验3 | Hexo</title>
+    <title>实验3 运用云平台搭建个人博客 | Hexo</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -80,7 +80,7 @@
         <div class="logo-name">Hexo</div>
         <div class="logo-desc">
             
-            目前此博客仅用于云计算实验
+            Ŀǰ�˲��ͽ������Ƽ���ʵ��
             
         </div>
     </div>
@@ -179,12 +179,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">202022161215-薛正康-计20.3-实验3</h1>
+                    <h1 class="description center-align post-title">实验3 运用云平台搭建个人博客</h1>
                 </div>
             </div>
         </div>
@@ -333,7 +333,192 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="山东大学-计算机科学与技术-学院"><a href="#山东大学-计算机科学与技术-学院" class="headerlink" title=" 山东大学  计算机科学与技术  学院"></a><center> 山东大学  计算机科学与技术  学院</h1><p>  云计算技术  课程实验报告</p>
+                <h1 id="实验3-运用云平台搭建个人博客"><a href="#实验3-运用云平台搭建个人博客" class="headerlink" title=" 实验3 运用云平台搭建个人博客 "></a><center> 实验3 运用云平台搭建个人博客 </center></h1><h2 id="实验目的"><a href="#实验目的" class="headerlink" title="实验目的"></a>实验目的</h2><p>熟悉个人博客的搭建流程，运用云平台搭建个人博客，并将实验报告上传。</p>
+<p>具体包括：注册Github账号，搭建Hexo环境并实现个人博客搭建，撰写实验报告，并将实验报告上传至自己的博客。</p>
+<h2 id="实验步骤与内容"><a href="#实验步骤与内容" class="headerlink" title="实验步骤与内容"></a>实验步骤与内容</h2><h3 id="1、环境搭建"><a href="#1、环境搭建" class="headerlink" title="1、环境搭建"></a>1、环境搭建</h3><p>Hexo 基于 Node.js，搭建过程中还需要使用 npm（Node.js 已带） 和 git，因此先搭建本地操作环境，安装 Node.js 和 Git。在其他课程的实验中我曾经安装过对应组件。此处仅展示其版本号</p>
+<p><img src="/2023/03/24/Lab-Report-4/clip_image002.png"></p>
+<h3 id="2、连接Github"><a href="#2、连接Github" class="headerlink" title="2、连接Github"></a>2、连接Github</h3><p>此前已经注册过Github账号，因此直接进行设置。</p>
+<p>右键 -&gt;  Git Bash Here ，设置用户名和邮箱。</p>
+<p><img src="/2023/03/24/Lab-Report-4/clip_image004.png"></p>
+<p>之后创建SSH密钥，因网络原因，我重复做了多次实验，此处仅展示其中某一次（非最终）的创建结果。</p>
+<p><img src="/2023/03/24/Lab-Report-4/clip_image006.png"></p>
+<p>之后添加密钥，进入 [C:\Users\用户名.ssh]  目录（要勾选显示“隐藏的项目”），用记事本打开公钥 id_rsa.pub 文件并复制里面的内容。对应的目录下文件结构见下图</p>
+<p><img src="/2023/03/24/Lab-Report-4/clip_image008.png"></p>
+<p>登陆 GitHub ，进入 Settings 页面，选择左边栏的 SSH and GPG keys，点击 New SSH key。取个标题，粘贴复制的 id_rsa.pub 内容到 Key 中，点击 Add SSH key 完成添加。添加过程和完成后的结果见下图。</p>
+<p><img src="/2023/03/24/Lab-Report-4/clip_image010.png"></p>
+<p><img src="/2023/03/24/Lab-Report-4/clip_image012.png"></p>
+<p>之后验证连接，打开Git Bash，输入对应指令，显示“Hi xxx! You’ve successfully……” 即连接成功。因网络原因，实验进行多次，此处仅给出某一次成功连接的示意图。</p>
+<p><img src="/2023/03/24/Lab-Report-4/clip_image014.png"></p>
+<h3 id="3、创建Github-Pages仓库"><a href="#3、创建Github-Pages仓库" class="headerlink" title="3、创建Github Pages仓库"></a>3、创建Github Pages仓库</h3><p>在GithubGitHub 主页右上角加号 -&gt; New repository：Repository name 中输入“用户名.github.io”；勾选 “Initialize this repository with a README”；Description 选填。填好后点击 Create repository 创建，创建后默认自动启用 HTTPS，博客地址为：<code>https://用户名.github.io</code>。过程图和完成图如下（因此时已完成实验，仅给出示意图）。</p>
+<p><img src="/2023/03/24/Lab-Report-4/clip_image016.png"></p>
+<p><img src="/2023/03/24/Lab-Report-4/clip_image018.png"></p>
+<h3 id="4、本地安装Hexo博客程序"><a href="#4、本地安装Hexo博客程序" class="headerlink" title="4、本地安装Hexo博客程序"></a>4、本地安装Hexo博客程序</h3><p>新建一个文件夹用来存放 Hexo 的程序文件，如 Hexo-Blog。打开该文件夹，右键 -&gt; Git Bash Here。此处我创建了Hexooooooo文件夹（命名奇怪是因为重复了多次实验）。</p>
+<p>首先安装Hexo，使用npm一键安装Hexo博客程序，下图为某一次实验安装成功后的图：</p>
+<p><img src="/2023/03/24/Lab-Report-4/clip_image020.png"></p>
+<p>之后进行Hexo的初始化和本地预览。先初始化并安装所需组件：</p>
+<p><img src="/2023/03/24/Lab-Report-4/clip_image022.png"></p>
+<p><img src="/2023/03/24/Lab-Report-4/clip_image024.png"></p>
+<p>之后依次输入下面命令，启动本地服务器进行预览，此处给出某一次实验中的图片，其中<code>hexo g</code>用于生成页面，<code>hexo s</code>用于启动预览：</p>
+<p><img src="/2023/03/24/Lab-Report-4/clip_image026.png"></p>
+<p><img src="/2023/03/24/Lab-Report-4/clip_image028.png"></p>
+<p>之后访问 <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000</a> ，出现 Hexo 默认页面，说明本地博客安装成功！</p>
+<p><img src="/2023/03/24/Lab-Report-4/clip_image030.png"></p>
+<h3 id="5、部署Hexo到Github-Pages"><a href="#5、部署Hexo到Github-Pages" class="headerlink" title="5、部署Hexo到Github Pages"></a>5、部署Hexo到Github Pages</h3><p>本地博客测试成功后，就是上传到 GitHub 进行部署，使其能够在网络上访问。首先安装<code>hexo-deployer-git</code>。</p>
+<p><img src="/2023/03/24/Lab-Report-4/clip_image032.png"></p>
+<p>之后修改_config.yml文件末尾的 Deployment 部分，修改前后如下：</p>
+<p><img src="/2023/03/24/Lab-Report-4/clip_image034.png"></p>
+<p><img src="/2023/03/24/Lab-Report-4/clip_image036.png"></p>
+<p>之后再次运行<code>hexo d</code>将网站上传部署到GitHub Pages。</p>
+<p><img src="/2023/03/24/Lab-Report-4/clip_image038.png"></p>
+<p>此时GitHub项目页面变成下图模样，部署完成。</p>
+<p><img src="/2023/03/24/Lab-Report-4/clip_image040.png"></p>
+<p>重新访问GitHub域名就能够看到Hexo网站。之后可以自行进行编写。部署成功前后图如下：</p>
+<p><img src="/2023/03/24/Lab-Report-4/clip_image042.png"></p>
+<p><img src="/2023/03/24/Lab-Report-4/clip_image044.png"></p>
+<p>至此个人博客搭建完毕。</p>
+<h3 id="6、测试信息"><a href="#6、测试信息" class="headerlink" title="6、测试信息"></a>6、测试信息</h3><p>整体上只需要在本地进行修改，之后使用<code>hexo clean</code>清除已有界面，之后重新使用<code>hexo g</code>生成界面并使用<code>hexo d</code>进行部署。期间可以使用<code>hexo s</code>进行本地预览。下图是我做的测试：</p>
+<p><img src="/2023/03/24/Lab-Report-4/clip_image010-1679662195625-66.png"></p>
+<p><img src="/2023/03/24/Lab-Report-4/clip_image011.png"></p>
+<p><img src="/2023/03/24/Lab-Report-4/clip_image046.png"></p>
+<h3 id="7、更换主题"><a href="#7、更换主题" class="headerlink" title="7、更换主题"></a>7、更换主题</h3><p>为了使网站更有辨识度，我选择更换一个主题。在Hexo官方网站（<a target="_blank" rel="noopener" href="https://hexo.io/themes">https://hexo.io/themes</a> ）上有很多主题，在其中我使用了Matery主题，其具有以下优点：</p>
+<ul>
+<li><p>简单漂亮，文章内容美观易读</p>
+</li>
+<li><p>Material Design 设计</p>
+</li>
+<li><p>响应式设计，博客在桌面端、平板、手机等设备上均能很好的展现</p>
+</li>
+<li><p>首页轮播文章及每天动态切换 Banner 图片</p>
+</li>
+<li><p>瀑布流式的博客文章列表（文章无特色图片时会有 24 张漂亮的图片代替）</p>
+</li>
+<li><p>时间轴式的归档页</p>
+</li>
+<li><p>……</p>
+</li>
+</ul>
+<p>其多元化的功能将在以后逐渐实现，在此我仅进行主题的更换。</p>
+<p>首先下载主题，可通过直接访问<a target="_blank" rel="noopener" href="https://blinkfox.github.io/">https://blinkfox.github.io/</a> ，或者在themes文件夹下使用<code>git clone</code>命令来下载：</p>
+<pre class="line-numbers language-shell"><code class="language-shell">git clone https://github.com/blinkfox/hexo-theme-matery.git
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>接下来进行主题的更换，在_config.yml文件中，把themes下的主题进行更换。</p>
+<p><img src="/2023/03/24/Lab-Report-4/clip_image048.png"></p>
+<p><img src="/2023/03/24/Lab-Report-4/clip_image050.png"></p>
+<p>之后修改主题对应的配置，在此处我仅设置必须的设置，其他额外功能则按照配置文件的默认情况进行设置，此处不再展开描述。设置完成后使用<code>hexo clean</code>，<code>hexo g</code>，<code>hexo d</code>即可进行部署，效果如下：</p>
+<p><img src="/2023/03/24/Lab-Report-4/clip_image052.png"></p>
+<p><img src="/2023/03/24/Lab-Report-4/clip_image054.png"></p>
+<p><img src="/2023/03/24/Lab-Report-4/clip_image056.png"></p>
+<h3 id="8、新建一篇博客"><a href="#8、新建一篇博客" class="headerlink" title="8、新建一篇博客"></a>8、新建一篇博客</h3><p>在个根目录打开命令行，使用如下命令创建新文件，hexo会在&#x2F;sourse&#x2F;_posts目录下创建一篇新的文章，接下来在其中用MarkDown语法编写文章即可。</p>
+<p><img src="/2023/03/24/Lab-Report-4/clip_image058.png"></p>
+<p><img src="/2023/03/24/Lab-Report-4/clip_image060.png"></p>
+<p>此处将本次实验的报告上传，效果如下：</p>
+<p><img src="/2023/03/24/Lab-Report-4/clip_image002-1679663552252-74.png"></p>
+<p><img src="/2023/03/24/Lab-Report-4/clip_image002-1679663584388-76.png"></p>
+<h2 id="结论分析与体会："><a href="#结论分析与体会：" class="headerlink" title="结论分析与体会："></a>结论分析与体会：</h2><p>在本次实验中，我学习使用了GitHub Pages来搭建 Hexo 静态博客网站，通过ssh密钥将Hexo和GitHub进行连接，最终成功搭建了个人网站。虽然因为网络原因，总是遇上上传失败等问题，或者其他的问题导致需要重新开始实验，但是在多次实验的过程中，我对此也有了更加深刻的理解，也算是因祸得福。</p>
+<p>我遇到的所有问题几乎都是因为网络故障，但是其却有各种各样的呈现：</p>
+<p><img src="/2023/03/24/Lab-Report-4/clip_image002-1679662195624-62.png"></p>
+<p><img src="/2023/03/24/Lab-Report-4/clip_image004-1679662195624-63.png"></p>
+<p><img src="/2023/03/24/Lab-Report-4/clip_image006-1679662195625-64.png"></p>
+<p>不过这些问题在排除了网络故障后都迎刃而解。需要注意的事，有时需要对hexo进行清理，之后再重新进行生成和上传。</p>
+<p><img src="/2023/03/24/Lab-Report-4/clip_image008-1679662195625-65.png"></p>
+<p>在上传博客时，我遇到了一些问题，比如图片的上传问题、网页的中文显示、代码块显示错误（大括号不转义，复制按钮不显示）等，后来参考了下列文章后得到解决。</p>
+<center>
+
+<p><a target="_blank" rel="noopener" href="http://www.luckysec.cn/posts/1b9a9e28.html">http://www.luckysec.cn/posts/1b9a9e28.html</a> </p>
+</center>
+
+<center>
+
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_49230318/article/details/111619538">https://blog.csdn.net/weixin_49230318/article/details/111619538</a> </p>
+</center>
+
+<center>
+
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/265077468">https://zhuanlan.zhihu.com/p/265077468</a> </p>
+</center>
+
+<p>除此之外，如果不想使用GitHub的默认域名，也可以绑定我们自己的域名。</p>
+<p>下面给出hexo的常用命令</p>
+<style>
+.center 
+{
+  width: auto;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+
+<div class="center">
+
+
+
+<table>
+<thead>
+<tr>
+<th>指令</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>hexo  new “name”</td>
+<td>新建文章</td>
+</tr>
+<tr>
+<td>hexo  new page “name”</td>
+<td>新建页面</td>
+</tr>
+<tr>
+<td>hexo  g</td>
+<td>生成页面</td>
+</tr>
+<tr>
+<td>hexo  d</td>
+<td>部署</td>
+</tr>
+<tr>
+<td>hexo  g -d</td>
+<td>生成页面并部署</td>
+</tr>
+<tr>
+<td>hexo  s</td>
+<td>本地预览</td>
+</tr>
+<tr>
+<td>hexo  clean</td>
+<td>清除缓存和已生成的静态文件</td>
+</tr>
+<tr>
+<td>hexo  help</td>
+<td>帮助</td>
+</tr>
+</tbody></table>
+</div>
+
+ 
+
+<p>另外我还了解了一些hexo的相关知识，此处给出：</p>
+<p>Hexo是一个基于Node.js的静态博客框架，可以快速、简洁且高效地生成静态网页。Hexo支持Markdown和大多数Octopress插件，有强大的API和无限的扩展性。Hexo还可以一键部署到GitHub Pages, Heroku或其他平台。</p>
+<p>Hexo的优点有：</p>
+<ul>
+<li><p>生成速度快，性能高</p>
+</li>
+<li><p>主题丰富，自定义灵活</p>
+</li>
+<li><p>文档完善，社区活跃</p>
+</li>
+<li><p>兼容多种模板引擎和NPM包</p>
+</li>
+</ul>
+<p>Hexo的缺点有：</p>
+<ul>
+<li><p>需要一定的Node.js基础和命令行操作</p>
+</li>
+<li><p>需要手动备份数据和配置文件</p>
+</li>
+<li><p>需要定期更新依赖包和插件</p>
+</li>
+</ul>
 
                 
             </div>
@@ -448,15 +633,15 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="202022161215-薛正康-计20.3-实验3">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="实验3 运用云平台搭建个人博客">
                         
-                        <span class="card-title">202022161215-薛正康-计20.3-实验3</span>
+                        <span class="card-title">实验3 运用云平台搭建个人博客</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            云计算实验报告四
+                            202022161215-薛正康-计20.3-实验3
                         
                     </div>
                     <div class="publish-info">
